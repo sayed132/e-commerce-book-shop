@@ -7,30 +7,75 @@ import { HiOutlineArrowSmallRight } from "react-icons/hi2";
 import { IoCheckmarkDoneCircleOutline } from "react-icons/io5";
 import { BsArrow90DegUp, BsArrowCounterclockwise } from "react-icons/bs";
 import { FaHandHoldingUsd } from "react-icons/fa";
-import { AiOutlineShareAlt } from "react-icons/ai";
+import { AiFillTag, AiOutlineShareAlt } from "react-icons/ai";
 import pic1 from "../../../assets/book.jpg"
 import pic2 from "../../../assets/book2.jpg"
 import pic3 from "../../../assets/book5.jpeg"
 import pic4 from "../../../assets/book4.jpeg"
+import { useState } from "react";
 const BookDetails = () => {
+
+    const [data, setData] = useState([
+        {
+            id: 1,
+            bookImg: 'https://s3-ap-southeast-1.amazonaws.com/rokomari110/ProductNew20190903/130X186/e2f13ea4b_204868.jpg',
+            title: 'Book 1',
+            author: 'Author 1',
+            rating: 4.5,
+            price: 19.99,
+        },
+        {
+            id: 2,
+            bookImg: 'https://s3-ap-southeast-1.amazonaws.com/rokomari110/ProductNew20190903/130X186/e2f13ea4b_204868.jpg',
+            title: 'Book 1',
+            author: 'Author 1',
+            rating: 4.5,
+            price: 19.99,
+        },
+        {
+            id: 3,
+            bookImg: 'https://s3-ap-southeast-1.amazonaws.com/rokomari110/ProductNew20190903/130X186/e2f13ea4b_204868.jpg',
+            title: 'Book 1',
+            author: 'Author 1',
+            rating: 4.5,
+            price: 19.99,
+        },
+        {
+            id: 4,
+            bookImg: 'https://s3-ap-southeast-1.amazonaws.com/rokomari110/ProductNew20190903/130X186/e2f13ea4b_204868.jpg',
+            title: 'Book 1',
+            author: 'Author 1',
+            rating: 4.5,
+            price: 19.99,
+        },
+        {
+            id: 5,
+            bookImg: 'https://s3-ap-southeast-1.amazonaws.com/rokomari110/ProductNew20190903/130X186/e2f13ea4b_204868.jpg',
+            title: 'Book 1',
+            author: 'Author 1',
+            rating: 4.5,
+            price: 19.99,
+        },
+        // Add more data rows here
+    ]);
 
     return (
         <div>
-            <div className="p-12  rounded-md shadow-lg">
+            <div className="  rounded-md ">
 
                 <div action="" className="container flex flex-col mx-auto space-y-12">
 
 
                     {/* Product Information  */}
-                    <fieldset className="grid grid-cols-12  items-start gap-6">
+                    <fieldset className="grid grid-cols-6  shadow-2xl  items-start gap-x-12 gap-y-6 p-8">
 
-                        {/* product gallery  */}
-                        <div className="col-span-full lg:col-span-6 gap-6">
+                        {/* books preview  */}
+                        <div className="col-span-full lg:col-span-2 gap-6">
                             <div className="grid grid-cols-6 items-center mx-auto gap-4">
                                 <div className="space-y-2 col-span-full lg:col-span-2">
                                     <h2 className="text-base font-bold text-gray-500">Book Preview</h2>
                                 </div>
-                                <hr className="space-y-2 col-span-full lg:col-span-4 lg:-ms-16" />
+                                <hr className="space-y-2 col-span-full lg:col-span-4 lg:-ms-3" />
                                 <div className="space-y-2 form-control  col-span-full lg:col-span-6 ">
                                     <div className="grid grid-cols-4 mx-auto gap-4">
                                         <div className="col-span-full  mx-auto">
@@ -59,7 +104,7 @@ const BookDetails = () => {
                                     </div>
                                 </div>
                                 <div className="space-y-2 form-control mt-8 col-span-full lg:col-span-6 ">
-                                    <button className="btn border mx-auto text-green-400 border-green-400 hover:text-white hover:bg-green-400 w-6/12 text-lg flex items-center justify-evenly">
+                                    <button className="btn border mx-auto text-green-400 border-green-400 hover:text-white hover:bg-green-400 w-9/12 text-lg flex items-center justify-evenly">
                                         <p className="text-3xl "><BsArrow90DegUp></BsArrow90DegUp></p>
                                         <p className="font-bold text-lg">Read Some Pages</p>
 
@@ -68,13 +113,13 @@ const BookDetails = () => {
                             </div>
                         </div>
 
-                        {/* product details  */}
-                        <div className="col-span-full lg:col-span-6">
+                        {/* book details  */}
+                        <div className="col-span-full lg:col-span-3">
                             <div className="grid grid-cols-6 items-center mx-auto gap-4">
                                 <div className="space-y-2 col-span-full lg:col-span-2 ">
                                     <h2 className="text-base font-bold text-gray-500">Book Details</h2>
                                 </div>
-                                <hr className="space-y-2 col-span-full lg:col-span-4 lg:-ms-14" />
+                                <hr className="space-y-2 col-span-full lg:col-span-4 lg:-ms-20" />
 
                                 <div className="space-y-2 form-control  col-span-full text-start">
                                     <h2 className="text-xl font-semibold"> বাইশের বন্যা <span className="text-gray-400 font-medium">(হার্ডকভার)</span></h2>
@@ -136,6 +181,13 @@ const BookDetails = () => {
 
                                 <div className=" form-control  col-span-full text-start ">
                                     <div className="flex items-center gap-4">
+                                        <p className="text-xl text-green-600"><AiFillTag></AiFillTag></p>
+                                        <p className="text-green-400">নিশ্চিত ফ্রি শিপিং! ৮৯৯+ টাকার বই অর্ডারে (GOTIGERS কোড ব্যবহারে)। আজ সারাদিন!</p>
+                                    </div>
+                                </div>
+
+                                <div className=" form-control  col-span-full text-start ">
+                                    <div className="flex items-center gap-4">
                                         <button className="btn border text-green-400 border-green-400 hover:text-white hover:bg-green-400 w-5/12 text-lg flex items-center justify-evenly">
                                             <p className="text-3xl "><IoCheckmarkDoneCircleOutline></IoCheckmarkDoneCircleOutline></p>
                                             <p className="font-bold text-lg">Buy Now</p>
@@ -152,12 +204,12 @@ const BookDetails = () => {
                                 <div className=" form-control mt-8 col-span-full text-start ">
                                     <div className="flex items-center gap-12">
                                         <div className="flex items-center gap-x-2">
-                                        <p className=" text-gray-600  text-2xl">
-                                            <FaHandHoldingUsd></FaHandHoldingUsd>
-                                        </p>
-                                        <p className=" text-gray-600   text-lg">
-                                            Cash On Delivery
-                                        </p>
+                                            <p className=" text-gray-600  text-2xl">
+                                                <FaHandHoldingUsd></FaHandHoldingUsd>
+                                            </p>
+                                            <p className=" text-gray-600   text-lg">
+                                                Cash On Delivery
+                                            </p>
                                         </div>
                                         <div className="flex items-center gap-x-2">
                                             <p className=" text-gray-600   hover:text-blue-500 text-xl">
@@ -174,18 +226,73 @@ const BookDetails = () => {
                                 <div className=" form-control  col-span-full text-start ">
                                     <div className="flex items-center gap-12">
                                         <div className="flex items-center gap-x-2">
-                                        <p className=" text-gray-600  text-2xl">
-                                            <BsArrowCounterclockwise></BsArrowCounterclockwise>
-                                        </p>
-                                        <p className=" text-gray-600   text-lg">
-                                            7Days Happy Return
-                                        </p>
+                                            <p className=" text-gray-600  text-2xl">
+                                                <BsArrowCounterclockwise></BsArrowCounterclockwise>
+                                            </p>
+                                            <p className=" text-gray-600   text-lg">
+                                                7Days Happy Return
+                                            </p>
                                         </div>
 
                                     </div>
                                 </div>
+                            </div>
+                        </div>
 
+                        {/* books preview  */}
+                        <div className="col-span-full lg:col-span-1 gap-6 bg-gray-100">
+                            <div className="grid grid-cols-6 items-center mx-auto gap-4 p-1">
+                                <div className="space-y-2 col-span-full">
+                                    <h2 className="text-base font-bold text-gray-500">Related books</h2>
+                                </div>
 
+                                {data.map((item) => (
+                                    <div key={item.id} className="col-span-full  bg-white shadow-md">
+                                        <div className="grid grid-cols-5 items-center mx-auto p-2">
+                                            <div className="col-span-2 gap-2">
+                                                <img className="" src={item.bookImg} alt="" />
+                                            </div>
+
+                                            {/* book details  */}
+                                            <div className="col-span-full lg:col-span-3 ms-1">
+                                                <div className="grid grid-cols-3 items-center mx-auto">
+                                                    <div className=" form-control  col-span-full text-start ">
+                                                        <div className="flex items-center gap-2">
+                                                            
+                                                            <p className="font-bold text-gray-600">{item.title}</p>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div className=" form-control  col-span-full text-start ">
+                                                        <div className="flex items-center gap-2">
+                                                            
+                                                            <p className="text-sm text-gray-500 font-medium">{item.author}</p>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div className=" form-control  col-span-full text-start ">
+                                                        <div className="flex items-center ">
+                                                            <p className="flex text-warning text-xs">
+                                                                <RiStarSFill></RiStarSFill> <RiStarSFill></RiStarSFill>
+                                                                <RiStarSFill></RiStarSFill> <RiStarSFill></RiStarSFill>
+                                                                <span className="text-warning "><RiStarHalfSFill></RiStarHalfSFill></span>
+                                                            </p>
+                                                            <p className="text-xs ms-1">{item.rating}</p>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div className=" form-control  col-span-full text-start ">
+                                                        <div className="flex items-center gap-2">
+                                                            
+                                                            <p className="font-semibold text-gray-600 ">TK.{item.price}</p>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
 
 
 
@@ -197,23 +304,44 @@ const BookDetails = () => {
 
                     </fieldset>
 
-                    {/* <fieldset className="grid grid-cols-12  items-start gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
-                        <div className="col-span-12 ">
-                            <div className="grid grid-cols-6 items-center">
-                                <div className="space-y-2 col-span-full lg:col-span-1 lg:-ms-18">
-                                    <h2>Product Desecration</h2>
+                    {/* Product Specification & Summary */}
+
+                    <fieldset className="grid grid-cols-6 mb-12 shadow-2xl  items-start gap-x-12 gap-y-6 p-8">
+                        <div className="col-span-full gap-6">
+                            <div className="grid grid-cols-6 items-center mx-auto gap-4">
+                                <div className="space-y-2 col-span-full lg:col-span-2">
+                                    <h2 className="text-base font-bold text-gray-500">Product Specification & Summary</h2>
                                 </div>
-                                <hr className="space-y-2 col-span-full lg:col-span-5 " />
-                                <p className="space-y-2 col-span-full text-justify text-gray-400 my-12 px-4">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae reprehenderit repellendus expedita esse cupiditate quos doloremque rerum, corrupti ab illum est nihil, voluptate ex dignissimos! Sit voluptatem delectus nam, molestiae, repellendus ab sint quo aliquam debitis amet natus doloremque laudantium? Repudiandae, consequuntur, officiis quidem quo deleniti, autem non laudantium sequi error molestiae ducimus accusamus facere velit consectetur vero dolore natus nihil temporibus aspernatur quia consequatur? Consequuntur voluptate deserunt repellat tenetur debitis molestiae doloribus dicta. In rem illum dolorem atque ratione voluptates asperiores maxime doloremque laudantium magni neque ad quae quos quidem, quaerat rerum ducimus blanditiis reiciendis
-                                </p>
+                                <hr className="space-y-2 col-span-full lg:col-span-4 lg:-ms-32" />
+
+                                <div className="col-span-full">
+                                    <div className="tabs">
+                                        <a className="tab tab-lifted">Summary</a>
+                                        <a className="tab tab-lifted tab-active">Specification</a>
+                                        <a className="tab tab-lifted">Author Details</a>
+                                    </div>
+                                </div>
+                                <div className="col-span-full">
+                                    <p className="text-gray-600 text-justify text-lg">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quibusdam sint dolore nemo reiciendis earum molestias nam placeat nobis, voluptatibus, numquam maxime et rerum veniam! Similique voluptatum nulla veritatis dolorem quam! Aliquid officia eos laborum. Omnis, modi! Quasi, quidem tempore labore, eligendi deserunt itaque adipisci quibusdam, temporibus ut dolorum enim consequatur natus blanditiis minus repudiandae esse ducimus? Aut cum repellat asperiores temporibus voluptatem! Suscipit, magni voluptate debitis cumque architecto repellat natus? Repudiandae perferendis quibusdam molestias? Non similique suscipit, dolor iure exercitationem quaerat nulla itaque ducimus? Dolor consequatur, sapiente earum odio tempore expedita harum. Ab eligendi quis architecto vero alias provident, molestias aliquid perspiciatis quia, voluptatem dicta dolorum excepturi? Cum ipsa nam provident ea laudantium quod placeat quo molestiae veniam ipsam.
+                                    </p>
+                                </div>
+
+
+
                             </div>
 
+                        </div>
+                    </fieldset>
+
+                    <fieldset className="grid grid-cols-6 mb-12 shadow-2xl  items-start gap-x-12 gap-y-6 p-8">
+                        <div className="col-span-12 ">
+
                             <div className="grid grid-cols-6 items-center mx-auto gap-4">
-                                <div className="space-y-2 col-span-full lg:col-span-1 lg:-ms-18">
-                                    <h2>Rating Analytics</h2>
+                                <div className="space-y-2 col-span-full lg:col-span-2">
+                                    <h2 className="text-base font-bold text-gray-500">Reviews and Ratings</h2>
                                 </div>
-                                <hr className="space-y-2 col-span-full lg:col-span-5 " />
+                                <hr className="space-y-2 col-span-full lg:col-span-4 lg:-ms-32" />
                                 <div className="space-y-2 col-span-full">
                                     <div className="grid grid-cols-12 items-center mx-auto gap-4 ">
                                         <div className="space-y-2 form-control  col-span-full lg:col-span-7 ">
@@ -257,32 +385,11 @@ const BookDetails = () => {
                                                     <div className="flex flex-col items-center py-6 space-y-3">
                                                         <span className="text-center text-8xl font-bold">4.9</span>
                                                         <div className="flex space-x-3">
-                                                            <button type="button" title="Rate 1 stars" aria-label="Rate 1 stars">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-10 h-10 text-yellow-500">
-                                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                                                </svg>
-                                                            </button>
-                                                            <button type="button" title="Rate 2 stars" aria-label="Rate 2 stars">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-10 h-10 text-yellow-500">
-                                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                                                </svg>
-                                                            </button>
-                                                            <button type="button" title="Rate 3 stars" aria-label="Rate 3 stars">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-10 h-10 text-yellow-500">
-                                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                                                </svg>
-                                                            </button>
-                                                            <button type="button" title="Rate 4 stars" aria-label="Rate 4 stars">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-10 h-10 text-yellow-500">
-                                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                                                </svg>
-                                                            </button>
-                                                            <button type="button" title="Rate 5 stars" aria-label="Rate 5 stars">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-10 h-10 text-gray-600">
-                                                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                                                                </svg>
-                                                            </button>
-
+                                                            <p className="flex text-warning text-4xl">
+                                                                <RiStarSFill></RiStarSFill> <RiStarSFill></RiStarSFill>
+                                                                <RiStarSFill></RiStarSFill> <RiStarSFill></RiStarSFill>
+                                                                <span className="text-warning "><RiStarHalfSFill></RiStarHalfSFill></span>
+                                                            </p>
                                                         </div>
                                                         <span className="text-center text-xl font-bold text-gray-400">Your Average Rating Star</span>
                                                     </div>
@@ -292,11 +399,7 @@ const BookDetails = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </fieldset>
 
-                    <fieldset className="grid grid-cols-12  items-start gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
-                        <div className="col-span-12">
                             <div className="grid grid-cols-6 items-center">
                                 <div className="space-y-2 col-span-full lg:col-span-1 lg:-ms-18">
                                     <h2>Customer Reviews</h2>
@@ -315,10 +418,6 @@ const BookDetails = () => {
                                                 </div>
 
                                             </div>
-
-                                            <div className="flex items-center space-x-2 dark:text-yellow-500">
-                                                <button className="btn btn-primary"><BsFillReplyAllFill></BsFillReplyAllFill>Replay</button>
-                                            </div>
                                         </div>
                                         <div className="rating ms-2">
                                             <input type="radio" name="rating-1" className="mask mask-star bg-orange-400 mx-2" checked disabled />
@@ -346,9 +445,6 @@ const BookDetails = () => {
 
                                             </div>
 
-                                            <div className="flex items-center space-x-2 dark:text-yellow-500">
-                                                <button className="btn btn-primary"><BsFillReplyAllFill></BsFillReplyAllFill>Replay</button>
-                                            </div>
                                         </div>
                                         <div className="rating ms-2">
                                             <input type="radio" name="rating-1" className="mask mask-star bg-orange-400 mx-2" checked disabled />
@@ -365,12 +461,10 @@ const BookDetails = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className="col-span-12">
                             <div className="grid grid-cols-6 items-center">
                                 <div className="space-y-2 col-span-full lg:col-span-1 lg:-ms-18">
-                                    <h2>Review Reply Form</h2>
+                                    <h2>Write Your Review</h2>
                                 </div>
                                 <hr className="space-y-2 col-span-full lg:col-span-5 " />
                                 <form action="" className="container col-span-6 mx-auto space-y-12">
@@ -383,15 +477,16 @@ const BookDetails = () => {
                                         </div>
                                         <input
                                             className="btn btn-accent col-span-full mt-4"
-                                            value="Drop Your Replies"
+                                            value="Drop Your Review"
                                             type="submit"
                                         />
                                     </div>
                                 </form>
 
                             </div>
+
                         </div>
-                    </fieldset> */}
+                    </fieldset>
 
                 </div>
             </div>
