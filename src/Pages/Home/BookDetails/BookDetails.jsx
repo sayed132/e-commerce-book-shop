@@ -82,31 +82,31 @@ const BookDetails = () => {
                                             <img className="h-96" src={pic1} alt="" />
                                         </div>
                                         <div className="col-span-1 ">
-                                            <div className="w-24  rounded">
-                                                <img className="w-24 h-20" src={pic1} />
+                                            <div className="w-16 lg:w-20  rounded">
+                                                <img className="w-16 lg:w-20 h-20" src={pic1} />
                                             </div>
                                         </div>
                                         <div className="col-span-1 ">
-                                            <div className="w-24  rounded">
-                                                <img className="w-24 h-20" src={pic2} />
+                                            <div className="w-16 lg:w-20  rounded">
+                                                <img className="w-16 lg:w-20 h-20" src={pic2} />
                                             </div>
                                         </div>
                                         <div className="col-span-1 ">
-                                            <div className="w-24  rounded">
-                                                <img className="w-24 h-20" src={pic3} />
+                                            <div className="w-16 lg:w-24  rounded">
+                                                <img className="w-16 lg:w-20 h-20" src={pic3} />
                                             </div>
                                         </div>
                                         <div className="col-span-1 ">
-                                            <div className="w-24  rounded">
-                                                <img className="w-24 h-20" src={pic4} />
+                                            <div className="w-16 lg:w-20  rounded">
+                                                <img className="w-16 lg:w-20 h-20" src={pic4} />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="space-y-2 form-control mt-8 col-span-full lg:col-span-6 ">
-                                    <button className="btn border mx-auto text-green-400 border-green-400 hover:text-white hover:bg-green-400 w-9/12 text-lg flex items-center justify-evenly">
-                                        <p className="text-3xl "><BsArrow90DegUp></BsArrow90DegUp></p>
-                                        <p className="font-bold text-lg">Read Some Pages</p>
+                                    <button className="btn border mx-auto text-green-400 border-green-400 hover:text-white hover:bg-green-400 w-full lg:w-9/12 text-sm lg:text-lg flex items-center justify-evenly">
+                                        <p className="text-xl lg:text-3xl "><BsArrow90DegUp></BsArrow90DegUp></p>
+                                        <p className="font-bold text-sm lg:text-lg">Read Some Pages</p>
 
                                     </button>
                                 </div>
@@ -132,7 +132,14 @@ const BookDetails = () => {
                                     <div className="flex items-center gap-4">
                                         <p className="text-xl text-purple-600"><TbCategory2></TbCategory2></p>
                                         <p className="font-bold">Category :</p>
-                                        <p className="bg-warning px-4 py-1 font-bold text-white rounded-md">#1 Best Seller</p>
+                                        <p className="bg-warning px-2 lg:px-4 py-1 font-medium lg:font-bold text-white rounded-md">#1 Best Seller</p>
+                                        <p className="hidden lg:flex">in</p>
+                                        <p className="text-blue-500 hidden lg:flex">Natural History</p>
+                                    </div>
+                                </div>
+                                <div className="lg:hidden -mt-2 form-control  col-span-full text-start ">
+                                    <div className="flex items-center gap-4">
+                                        
                                         <p className="">in</p>
                                         <p className="text-blue-500">Natural History</p>
                                     </div>
@@ -146,8 +153,14 @@ const BookDetails = () => {
                                             <span className="text-warning "><RiStarHalfSFill></RiStarHalfSFill></span>
                                         </p>
                                         <p className="">4.9/5 Ratings</p>
-                                        <p className="">|</p>
-                                        <p className="text-blue-500">450+ Reviews</p>
+                                        <p className="hidden lg:flex">|</p>
+                                        <p className="text-blue-500 hidden lg:flex">450+ Reviews</p>
+                                    </div>
+                                </div>
+
+                                <div className="lg:hidden -mt-2 form-control  col-span-full text-start ">
+                                    <div className="flex items-center gap-4">
+                                        <p className="text-blue-500 ">450+ Reviews</p>
                                     </div>
                                 </div>
 
@@ -175,28 +188,34 @@ const BookDetails = () => {
                                         <p className=" text-gray-700 font-semibold  text-2xl">
                                             TK. 322
                                         </p>
-                                        <p className="text-gray-400"><span>You Save Tk. 68 (17%)</span></p>
+                                        <p className="text-gray-400 hidden lg:flex"><span>You Save Tk. 68 (17%)</span></p>
+                                    </div>
+                                </div>
+
+                                <div className="lg:hidden -mt-2 form-control  col-span-full text-start ">
+                                    <div className="flex items-center gap-4">
+                                        <p className="text-gray-400 "><span>You Save Tk. 68 (17%)</span></p>
                                     </div>
                                 </div>
 
                                 <div className=" form-control  col-span-full text-start ">
                                     <div className="flex items-center gap-4">
                                         <p className="text-xl text-green-600"><AiFillTag></AiFillTag></p>
-                                        <p className="text-green-400">নিশ্চিত ফ্রি শিপিং! ৮৯৯+ টাকার বই অর্ডারে (GOTIGERS কোড ব্যবহারে)। আজ সারাদিন!</p>
+                                        <p className="text-green-400 text-sm">নিশ্চিত ফ্রি শিপিং! ৮৯৯+ টাকার বই অর্ডারে (GOTIGERS কোড ব্যবহারে)। আজ সারাদিন!</p>
                                     </div>
                                 </div>
 
                                 <div className=" form-control  col-span-full text-start ">
-                                    <div className="flex items-center gap-4">
-                                        <button className="btn border text-green-400 border-green-400 hover:text-white hover:bg-green-400 w-5/12 text-lg flex items-center justify-evenly">
-                                            <p className="text-3xl "><IoCheckmarkDoneCircleOutline></IoCheckmarkDoneCircleOutline></p>
+                                    <div className="flex  flex-col lg:flex-row items-center gap-4">
+                                        <button className="btn border text-green-400 border-green-400 hover:text-white hover:bg-green-400 w-full lg:w-5/12 text-lg flex items-center justify-evenly">
+                                            <p className="text-2xl "><IoCheckmarkDoneCircleOutline></IoCheckmarkDoneCircleOutline></p>
                                             <p className="font-bold text-lg">Buy Now</p>
-                                            <p className="font-bold text-3xl"><HiOutlineArrowSmallRight></HiOutlineArrowSmallRight></p>
+                                            <p className="font-bold text-2xl"><HiOutlineArrowSmallRight></HiOutlineArrowSmallRight></p>
                                         </button>
-                                        <button className="btn btn-warning w-5/12 flex items-center justify-evenly">
-                                            <p className="text-3xl text-white"><HiShoppingCart></HiShoppingCart></p>
+                                        <button className="btn btn-warning w-full lg:w-5/12 flex items-center justify-evenly">
+                                            <p className="text-2xl text-white"><HiShoppingCart></HiShoppingCart></p>
                                             <p className="font-bold text-lg text-white">Add to cart</p>
-                                            <p className="font-bold text-3xl text-white"><HiOutlineArrowSmallRight></HiOutlineArrowSmallRight></p>
+                                            <p className="font-bold text-2xl text-white"><HiOutlineArrowSmallRight></HiOutlineArrowSmallRight></p>
                                         </button>
                                     </div>
                                 </div>
@@ -211,7 +230,21 @@ const BookDetails = () => {
                                                 Cash On Delivery
                                             </p>
                                         </div>
-                                        <div className="flex items-center gap-x-2">
+                                        <div className="hidden lg:flex items-center gap-x-2">
+                                            <p className=" text-gray-600   hover:text-blue-500 text-xl">
+                                                <AiOutlineShareAlt></AiOutlineShareAlt>
+                                            </p>
+                                            <p className=" text-gray-500 text-lg  hover:text-blue-500">
+                                                Share this Book
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div className=" form-control col-span-full text-start ">
+                                    <div className="flex items-center gap-12">
+                                        <div className="lg:hidden flex items-center gap-x-2">
                                             <p className=" text-gray-600   hover:text-blue-500 text-xl">
                                                 <AiOutlineShareAlt></AiOutlineShareAlt>
                                             </p>
@@ -240,7 +273,7 @@ const BookDetails = () => {
                         </div>
 
                         {/* books preview  */}
-                        <div className="col-span-full lg:col-span-1 gap-6 bg-gray-100">
+                        <div className="hidden lg:grid lg:col-span-1 gap-6 bg-gray-100">
                             <div className="grid grid-cols-6 items-center mx-auto gap-4 p-1">
                                 <div className="space-y-2 col-span-full">
                                     <h2 className="text-base font-bold text-gray-500">Related books</h2>
@@ -335,7 +368,7 @@ const BookDetails = () => {
                     </fieldset>
 
                     <fieldset className="grid grid-cols-6 mb-12 shadow-2xl  items-start gap-x-12 gap-y-6 p-8">
-                        <div className="col-span-12 ">
+                        <div className="col-span-full ">
 
                             <div className="grid grid-cols-6 items-center mx-auto gap-4">
                                 <div className="space-y-2 col-span-full lg:col-span-2">
