@@ -1,9 +1,12 @@
-import BookDetails from "../BookDetails/BookDetails";
+import Books from "../Books/Books";
+import Category from "../Category/Category";
+
 
 const Home = () => {
     return (
         <div>
-            <BookDetails></BookDetails>
+            <Category></Category>
+            <Books></Books>
         </div>
     );
 };

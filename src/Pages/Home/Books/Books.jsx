@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
 import { RiStarHalfSFill, RiStarSFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
-const Category = () => {
-    const [categories, setCategories] = useState([]);
+const Books = () => {
+    const [books, setBooks] = useState([]);
 
+    
     useEffect(() => {
-        fetch('category.json')
-            .then(res => res.json())
-            .then(data => setCategories(data))
-    }, [])
+        // JSON file theke data load kore state e set korun
+        fetch('books.json')
+          .then((response) => response.json())
+          .then((data) => setBooks(data))
+          .catch((error) => console.error('Error fetching data:', error));
+      }, []);
     return (
         <div>
             <div>
@@ -21,11 +25,11 @@ const Category = () => {
                 } */}
                 <div className="grid grid-cols-12 gap-4 mx-auto items-center my-8">
                     {
-                        categories.map(category =>
-                            <div className="col-span-3 h-24 border" key={category.id}>
+                        books.map(book =>
+                            <Link to="/details"  className="col-span-3 h-36 border"  key={book._id}>
                                 <div className="grid grid-cols-5 items-center mx-auto">
-                                    <div className="col-span-2 h-24 ">
-                                        <img className="h-24 w-28" src={category?.author?.img} alt="" />
+                                    <div className="col-span-2 h-36 ">
+                                        <img className="h-36 w-40" src={book?.author?.image} alt="" />
                                     </div>
 
                                     {/* book details  */}
@@ -34,14 +38,14 @@ const Category = () => {
                                             <div className=" form-control  col-span-full text-start ">
                                                 <div className="flex items-center gap-2">
 
-                                                    <p className="font-bold text-gray-600">{category?.name}</p>
+                                                    <p className="font-bold text-gray-600">{book?.title}</p>
 
                                                 </div>
                                             </div>
                                             <div className=" form-control  col-span-full text-start ">
                                                 <div className="flex items-center gap-2">
 
-                                                    <p className="text-sm text-gray-500 font-medium">{category?.author?.name }</p>
+                                                    <p className="text-sm text-gray-500 font-medium">{book?.author?.author}</p>
                                                 </div>
                                             </div>
                                             <div className=" form-control  col-span-full text-start ">
@@ -51,27 +55,32 @@ const Category = () => {
                                                         <RiStarSFill></RiStarSFill> <RiStarSFill></RiStarSFill>
                                                         <span className="text-warning "><RiStarHalfSFill></RiStarHalfSFill></span>
                                                     </p>
-                                                    <p className="text-xs ms-1">{ category?.rating?.total}</p>
+                                                    <p className="text-xs ms-1">{book?.rating?.total}</p>
 
                                                 </div>
                                             </div>
                                             <div className=" form-control  col-span-full text-start ">
                                                 <div className="flex items-center gap-2">
-
-                                                    <p className="font-semibold text-gray-600 ">TK.{ category?.price}</p>
-
+                                                    <p className=" text-gray-400 font-semibold line-through">
+                                                        TK.{book?.prev_price}
+                                                    </p>
+                                                    <p className=" text-blue-600 font-bold  ">
+                                                        TK.{book?.new_price}
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>)
+                            </Link>)
                     }
                 </div>
+                
 
             </div>
+            
         </div>
     );
 };
 
-export default Category;
+export default Books;

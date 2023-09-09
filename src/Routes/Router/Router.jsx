@@ -3,6 +3,8 @@ import MainLayouts from "../../Layouts/MainLayouts";
 import Home from "../../Pages/Home/Home/Home";
 import Error from "../../Error/Error";
 import Category from "../../Pages/Home/Category/Category";
+import Books from "../../Pages/Home/Books/Books";
+import BookDetails from "../../Pages/Home/BookDetails/BookDetails";
 
 const router = createBrowserRouter([
     {
@@ -17,7 +19,15 @@ const router = createBrowserRouter([
             {
                 path: "/category",
                 element: <Category></Category>
-            }
+            },
+            {
+                path: "/books",
+                element: <Books></Books>
+            },
+            {
+                path: "/details",
+                element: <BookDetails></BookDetails>
+            },
         ]
     }
 ])
