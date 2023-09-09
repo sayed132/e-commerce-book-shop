@@ -12,10 +12,9 @@ import pic1 from "../../../assets/book.jpg"
 import pic2 from "../../../assets/book2.jpg"
 import pic3 from "../../../assets/book5.jpeg"
 import pic4 from "../../../assets/book4.jpeg"
-import { useState } from "react";
 const BookDetails = () => {
 
-    const [data, setData] = useState([
+    const data = [
         {
             id: 1,
             bookImg: 'https://s3-ap-southeast-1.amazonaws.com/rokomari110/ProductNew20190903/130X186/e2f13ea4b_204868.jpg',
@@ -57,7 +56,7 @@ const BookDetails = () => {
             price: 19.99,
         },
         // Add more data rows here
-    ]);
+    ];
 
     return (
         <div>
