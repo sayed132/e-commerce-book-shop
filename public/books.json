@@ -138,5 +138,65 @@
       "published_date": "2022-08-30 16:38:45",
       "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Amader_Galpo_Jane_-Priyanka_Tewari-eee9c-288355.jpeg"
     }
+  },
+  {
+    "_id": 8,
+    "category_id": "02",
+    "category": "Romantics",
+    "title": "Amader Golpo",
+    "prev_price": "$10",
+    "rating": {
+      "number": 4.9,
+      "total": 390
+    },
+    "inStock": "680",
+    "total_stock": "680",
+    "new_price": "$8",
+    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quibusdam sint dolore nemo reiciendis earum molestias nam placeat nobis, voluptatibus, numquam maxime et rerum veniam! Similique voluptatum nulla veritatis dolorem quam! Aliquid officia eos laborum. Omnis, modi! Quasi, quidem tempore labore, eligendi deserunt itaque adipisci quibusdam, temporibus ut dolorum enim consequatur natus blanditiis minus repudiandae esse ducimus? Aut cum repellat asperiores temporibus voluptatem! Suscipit, magni voluptate debitis cumque architecto repellat natus? Repudiandae perferendis quibusdam molestias? Non similique suscipit, dolor iure exercitationem quaerat nulla itaque ducimus? Dolor consequatur, sapiente earum odio tempore expedita harum. Ab eligendi quis architecto vero alias provident, molestias aliquid perspiciatis quia, voluptatem dicta dolorum excepturi? Cum ipsa nam provident ea laudantium quod placeat quo molestiae veniam ipsam.",
+    "author": {
+      "author": "JOnson Cloud",
+      "published_date": "2022-08-30 16:38:45",
+      "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Amader_Galpo_Jane_-Priyanka_Tewari-eee9c-288355.jpeg"
+    }
+  },
+  {
+    "_id": 9,
+    "category_id": "02",
+    "category": "Romantics",
+    "title": "Amader Golpo",
+    "prev_price": "$10",
+    "rating": {
+      "number": 4.9,
+      "total": 390
+    },
+    "inStock": "680",
+    "total_stock": "680",
+    "new_price": "$8",
+    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quibusdam sint dolore nemo reiciendis earum molestias nam placeat nobis, voluptatibus, numquam maxime et rerum veniam! Similique voluptatum nulla veritatis dolorem quam! Aliquid officia eos laborum. Omnis, modi! Quasi, quidem tempore labore, eligendi deserunt itaque adipisci quibusdam, temporibus ut dolorum enim consequatur natus blanditiis minus repudiandae esse ducimus? Aut cum repellat asperiores temporibus voluptatem! Suscipit, magni voluptate debitis cumque architecto repellat natus? Repudiandae perferendis quibusdam molestias? Non similique suscipit, dolor iure exercitationem quaerat nulla itaque ducimus? Dolor consequatur, sapiente earum odio tempore expedita harum. Ab eligendi quis architecto vero alias provident, molestias aliquid perspiciatis quia, voluptatem dicta dolorum excepturi? Cum ipsa nam provident ea laudantium quod placeat quo molestiae veniam ipsam.",
+    "author": {
+      "author": "JOnson Cloud",
+      "published_date": "2022-08-30 16:38:45",
+      "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Amader_Galpo_Jane_-Priyanka_Tewari-eee9c-288355.jpeg"
+    }
+  },
+  {
+    "_id": 10,
+    "category_id": "02",
+    "category": "Romantics",
+    "title": "Amader Golpo",
+    "prev_price": "$10",
+    "rating": {
+      "number": 4.9,
+      "total": 390
+    },
+    "inStock": "680",
+    "total_stock": "680",
+    "new_price": "$8",
+    "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quibusdam sint dolore nemo reiciendis earum molestias nam placeat nobis, voluptatibus, numquam maxime et rerum veniam! Similique voluptatum nulla veritatis dolorem quam! Aliquid officia eos laborum. Omnis, modi! Quasi, quidem tempore labore, eligendi deserunt itaque adipisci quibusdam, temporibus ut dolorum enim consequatur natus blanditiis minus repudiandae esse ducimus? Aut cum repellat asperiores temporibus voluptatem! Suscipit, magni voluptate debitis cumque architecto repellat natus? Repudiandae perferendis quibusdam molestias? Non similique suscipit, dolor iure exercitationem quaerat nulla itaque ducimus? Dolor consequatur, sapiente earum odio tempore expedita harum. Ab eligendi quis architecto vero alias provident, molestias aliquid perspiciatis quia, voluptatem dicta dolorum excepturi? Cum ipsa nam provident ea laudantium quod placeat quo molestiae veniam ipsam.",
+    "author": {
+      "author": "JOnson Cloud",
+      "published_date": "2022-08-30 16:38:45",
+      "image": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Amader_Galpo_Jane_-Priyanka_Tewari-eee9c-288355.jpeg"
+    }
   }
 ]

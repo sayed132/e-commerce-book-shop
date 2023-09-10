@@ -5,6 +5,7 @@ import Error from "../../Error/Error";
 import Category from "../../Pages/Home/Category/Category";
 import Books from "../../Pages/Home/Books/Books";
 import BookDetails from "../../Pages/Home/BookDetails/BookDetails";
+import SearchItem from "../../Pages/Home/Search/SearchItem";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
             {
                 path: "/details",
                 element: <BookDetails></BookDetails>
+            },
+            {
+                path: "/search",
+                element: <SearchItem></SearchItem>
             },
         ]
     }

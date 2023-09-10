@@ -1,21 +1,7 @@
 
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Navbar = ({ handleSearch }) => {
-
-    const [searchTerm, setSearchTerm] = useState('');
-
-    const handleChange = (e) => {
-        setSearchTerm(e.target.value);
-    };
-
-    const handleSubmit = (e) => {
-        console.log('click', searchTerm);
-        e.preventDefault();
-        handleSearch(searchTerm);
-    };
-
+const Navbar = () => {
 
 
     const menuItems = <>
@@ -38,23 +24,23 @@ const Navbar = ({ handleSearch }) => {
                 <Link to={'/'} className="btn btn-ghost normal-case text-xl">Book Shop</Link>
             </div>
             <div className="navbar-end hidden lg:flex">
-                
+
                 <div className="flex items-center">
-                <form onSubmit={handleSubmit}>
+
                     <input
                         type="text"
                         placeholder="Search Books"
                         className="input input-bordered rounded-r-none w-44"
-                        value={searchTerm}
-                        onChange={handleChange}
                     />
                     <button
                         type="submit"
                         className=" w-3/12 px-2 rounded-r-xl h-12 bg-blue-500 text-white  hover:bg-blue-600"
+
                     >
+                        <Link to='/search'>
                         Search
+                        </Link>
                     </button>
-                </form>
                 </div>
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}

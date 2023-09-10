@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <CommonCssProvider>
       <App />
       </CommonCssProvider>
-    </ThemeProvider> 
-    
+    </ThemeProvider>
+
   </React.StrictMode>,
 )
