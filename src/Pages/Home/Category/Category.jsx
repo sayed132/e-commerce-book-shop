@@ -24,30 +24,30 @@ const Category = () => {
         autoplaySpeed: 3000, // Autoplay every 1 second (1000ms
     };
     return (
-        <div className="my-6">
+        <div className="mt-24">
             <Slider {...settings}>
                 {categories.map(category => (
-                    <div className=" px-12 " key={category.id}>
+                    <div className=" lg:px-12 px-2 " key={category.id}>
                         {/* Your card content here */}
                         <div className="grid grid-cols-4 shadow-md bg-gray-200  ">
                             <div className="col-span-full lg:col-span-2 ">
-                                <img className="h-28 " src={category?.author?.img} alt="" />
+                                <img className=" lg:h-28 " src={category?.author?.img} alt="" />
                             </div>
 
                             {/* book details  */}
-                            <div className="col-span-full lg:col-span-2 ms-1">
+                            <div className="col-span-full lg:col-span-2 mx-auto p-1 lg:ms-1">
                                 <div className="grid grid-cols-3 items-center mx-auto">
                                     <div className=" form-control  col-span-full text-start ">
                                         <div className="flex items-center gap-2">
 
-                                            <p className="font-bold text-gray-600">{category?.name}</p>
+                                            <p className="font-bold text-sm lg:text-base text-gray-600">{category?.name}</p>
 
                                         </div>
                                     </div>
                                     <div className=" form-control  col-span-full text-start ">
                                         <div className="flex items-center gap-2">
 
-                                            <p className="text-sm text-gray-500 font-medium">{category?.author?.name}</p>
+                                            <p className="text-xs lg:text-sm text-gray-500 font-medium">{category?.author?.name}</p>
                                         </div>
                                     </div>
                                     <div className=" form-control  col-span-full text-start ">
@@ -57,14 +57,14 @@ const Category = () => {
                                                 <RiStarSFill></RiStarSFill> <RiStarSFill></RiStarSFill>
                                                 <span className="text-warning "><RiStarHalfSFill></RiStarHalfSFill></span>
                                             </p>
-                                            <p className="text-xs ms-1">{category?.rating?.total}</p>
+                                            <p className="text-xs ms-1 hidden lg:flex">{category?.rating?.total}</p>
 
                                         </div>
                                     </div>
                                     <div className=" form-control  col-span-full text-start ">
                                         <div className="flex items-center gap-2">
 
-                                            <p className="font-semibold text-gray-600 ">TK.{category?.price}</p>
+                                            <p className="font-semibold text-sm lg:text-base text-gray-600 ">TK.{category?.price}</p>
 
                                         </div>
                                     </div>
