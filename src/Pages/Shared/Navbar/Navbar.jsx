@@ -1,7 +1,15 @@
 
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SearchModal from '../SearchNavbarItem/SearchModal';
 
 const Navbar = () => {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
 
 
     const menuItems = <>
@@ -23,9 +31,21 @@ const Navbar = () => {
                 </div>
                 <Link to={'/'} className="btn btn-ghost normal-case text-xl">Book Shop</Link>
             </div>
+            <div className="navbar-end flex">
+                <div className="">
+                    <button
+                        className="rounded-xl h-12  text-white "
+                        onClick={openModal}
+                    >
+                        Search
+                    </button>
+                </div>
+                {isModalOpen && <SearchModal closeModal={() => setIsModalOpen(false)} />}
+
+            </div>
             <div className="navbar-end hidden lg:flex">
 
-                <div className="flex items-center">
+                {/* <div className="flex items-center">
 
                     <input
                         type="text"
@@ -41,7 +61,8 @@ const Navbar = () => {
                         Search
                         </Link>
                     </button>
-                </div>
+                </div> */}
+
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}
                 </ul>

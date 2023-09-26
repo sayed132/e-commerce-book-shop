@@ -27,11 +27,11 @@ const Category = () => {
         <div className="my-6">
             <Slider {...settings}>
                 {categories.map(category => (
-                    <div className=" px-2 " key={category.id}>
+                    <div className=" px-12 " key={category.id}>
                         {/* Your card content here */}
                         <div className="grid grid-cols-4 shadow-md bg-gray-200  ">
-                            <div className="col-span-2 my-auto">
-                                <img className="h-28" src={category?.author?.img} alt="" />
+                            <div className="col-span-full lg:col-span-2 ">
+                                <img className="h-28 " src={category?.author?.img} alt="" />
                             </div>
 
                             {/* book details  */}
