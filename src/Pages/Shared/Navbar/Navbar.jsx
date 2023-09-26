@@ -5,10 +5,15 @@ import SearchModal from '../SearchNavbarItem/SearchModal';
 
 const Navbar = () => {
 
+    const [searchQuery, setSearchQuery] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => {
         setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
     };
 
 
@@ -31,37 +36,47 @@ const Navbar = () => {
                 </div>
                 <Link to={'/'} className="btn btn-ghost normal-case text-xl">Book Shop</Link>
             </div>
-            <div className="navbar-end flex">
-                <div className="">
+            <div className="navbar-end lg:hidden">
+                <div className="  flex  items-center">
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="w-28 p-2 border rounded-md mr-2"
+                    />
                     <button
-                        className="rounded-xl h-12  text-white "
+                        className="bg-white text-blue-500 px-4 py-2 rounded-md"
                         onClick={openModal}
                     >
                         Search
                     </button>
                 </div>
-                {isModalOpen && <SearchModal closeModal={() => setIsModalOpen(false)} />}
+                {isModalOpen && (
+                    <SearchModal closeModal={closeModal} searchQuery={searchQuery} />
+                )}
 
             </div>
             <div className="navbar-end hidden lg:flex">
 
-                {/* <div className="flex items-center">
-
+            <div className="  flex  items-center">
                     <input
                         type="text"
-                        placeholder="Search Books"
-                        className="input input-bordered rounded-r-none w-44"
+                        placeholder="Search..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className="w-56 p-2 border rounded-md mr-2"
                     />
                     <button
-                        type="submit"
-                        className=" w-3/12 px-2 rounded-r-xl h-12 bg-blue-500 text-white  hover:bg-blue-600"
-
+                        className="bg-white text-blue-500 px-4 py-2 rounded-md"
+                        onClick={openModal}
                     >
-                        <Link to='/search'>
                         Search
-                        </Link>
                     </button>
-                </div> */}
+                </div>
+                {isModalOpen && (
+                    <SearchModal closeModal={closeModal} searchQuery={searchQuery} />
+                )}
 
                 <ul className="menu menu-horizontal p-0">
                     {menuItems}
