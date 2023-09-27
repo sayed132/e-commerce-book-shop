@@ -8,11 +8,19 @@ import { IoCheckmarkDoneCircleOutline } from "react-icons/io5";
 import { BsArrow90DegUp, BsArrowCounterclockwise } from "react-icons/bs";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { AiFillTag, AiOutlineShareAlt } from "react-icons/ai";
-import pic1 from "../../../assets/book.jpg"
-import pic2 from "../../../assets/book2.jpg"
-import pic3 from "../../../assets/book5.jpeg"
-import pic4 from "../../../assets/book4.jpeg"
+import { useParams } from "react-router-dom";
+import booksData from "../../../books.json"
 const BookDetails = () => {
+
+    const { id } = useParams();
+    const book = booksData.find((book) => book._id === parseInt(id));
+    console.log(book, "okay mama");
+  
+    if (!book) {
+        console.log(book, "nai mama");
+      return <div>Book not found</div>;
+      
+    }
 
     const data = [
         {
@@ -78,26 +86,26 @@ const BookDetails = () => {
                                 <div className="space-y-2 form-control  col-span-full lg:col-span-6 ">
                                     <div className="grid grid-cols-4 mx-auto gap-4">
                                         <div className="col-span-full  mx-auto">
-                                            <img className="h-96" src={pic1} alt="" />
+                                            <img className="h-96" src={book?.author?.image} alt="" />
                                         </div>
                                         <div className="col-span-1 ">
                                             <div className="w-16 lg:w-20  rounded">
-                                                <img className="w-16 lg:w-20 h-20" src={pic1} />
+                                                <img className="w-16 lg:w-20 h-20" src={book?.author?.image} />
                                             </div>
                                         </div>
                                         <div className="col-span-1 ">
                                             <div className="w-16 lg:w-20  rounded">
-                                                <img className="w-16 lg:w-20 h-20" src={pic2} />
+                                                <img className="w-16 lg:w-20 h-20" src={book?.author?.image} />
                                             </div>
                                         </div>
                                         <div className="col-span-1 ">
                                             <div className="w-16 lg:w-24  rounded">
-                                                <img className="w-16 lg:w-20 h-20" src={pic3} />
+                                                <img className="w-16 lg:w-20 h-20" src={book?.author?.image} />
                                             </div>
                                         </div>
                                         <div className="col-span-1 ">
                                             <div className="w-16 lg:w-20  rounded">
-                                                <img className="w-16 lg:w-20 h-20" src={pic4} />
+                                                <img className="w-16 lg:w-20 h-20" src={book?.author?.image} />
                                             </div>
                                         </div>
                                     </div>
@@ -121,10 +129,10 @@ const BookDetails = () => {
                                 <hr className="space-y-2 col-span-full lg:col-span-4 lg:-ms-20" />
 
                                 <div className="space-y-2 form-control  col-span-full text-start">
-                                    <h2 className="text-xl font-semibold"> বাইশের বন্যা <span className="text-gray-400 font-medium">(হার্ডকভার)</span></h2>
+                                    <h2 className="text-xl font-semibold"> {book?.title} <span className="text-gray-400 font-medium">(হার্ডকভার)</span></h2>
                                 </div>
                                 <div className=" form-control  col-span-full text-start">
-                                    <h2 className="text-xl font-medium text-gray-500"> by <span className="text-blue-600 font-medium">Tasrif Khan</span></h2>
+                                    <h2 className="text-xl font-medium text-gray-500"> by <span className="text-blue-600 font-medium">{book?.author?.author}</span></h2>
                                 </div>
 
                                 <div className=" form-control  col-span-full text-start ">
@@ -133,7 +141,7 @@ const BookDetails = () => {
                                         <p className="font-bold">Category :</p>
                                         <p className="bg-warning px-2 lg:px-4 py-1 font-medium lg:font-bold text-white rounded-md">#1 Best Seller</p>
                                         <p className="hidden lg:flex">in</p>
-                                        <p className="text-blue-500 hidden lg:flex">Natural History</p>
+                                        <p className="text-blue-500 hidden lg:flex">{book?.category}</p>
                                     </div>
                                 </div>
                                 <div className="lg:hidden -mt-2 form-control  col-span-full text-start ">
@@ -151,15 +159,15 @@ const BookDetails = () => {
                                             <RiStarSFill></RiStarSFill> <RiStarSFill></RiStarSFill>
                                             <span className="text-warning "><RiStarHalfSFill></RiStarHalfSFill></span>
                                         </p>
-                                        <p className="">4.9/5 Ratings</p>
+                                        <p className="">{book?.rating?.number}/5 Ratings</p>
                                         <p className="hidden lg:flex">|</p>
-                                        <p className="text-blue-500 hidden lg:flex">450+ Reviews</p>
+                                        <p className="text-blue-500 hidden lg:flex">{book?.rating?.total}+ Reviews</p>
                                     </div>
                                 </div>
 
                                 <div className="lg:hidden -mt-2 form-control  col-span-full text-start ">
                                     <div className="flex items-center gap-4">
-                                        <p className="text-blue-500 ">450+ Reviews</p>
+                                        <p className="text-blue-500 ">{book?.rating?.total}+ Reviews</p>
                                     </div>
                                 </div>
 
@@ -167,7 +175,7 @@ const BookDetails = () => {
                                     <div className="flex items-center gap-4">
                                         <p className="text-xl text-blue-400"><LiaBookSolid></LiaBookSolid></p>
                                         <p className="font-bold">InStoke :</p>
-                                        <p className="bg-success px-4 py-1 font-bold text-white rounded-md">120 copies available</p>
+                                        <p className="bg-success px-4 py-1 font-bold text-white rounded-md">{book?.inStock} copies available</p>
                                     </div>
                                 </div>
 
@@ -175,17 +183,17 @@ const BookDetails = () => {
                                     <div className="flex items-center gap-4">
                                         <p className="text-xl text-green-600"><HiShoppingCart></HiShoppingCart></p>
                                         <p className="font-bold">TotalStoke :</p>
-                                        <p className="bg-primary px-4 py-1 font-bold text-white rounded-md">600 copies</p>
+                                        <p className="bg-primary px-4 py-1 font-bold text-white rounded-md">{book?.total_stock} copies</p>
                                     </div>
                                 </div>
 
                                 <div className=" form-control  col-span-full text-start ">
                                     <div className="flex items-center gap-4">
                                         <p className=" text-gray-400 font-semibold line-through text-2xl">
-                                            TK. 400
+                                            TK. {book?.prev_price}
                                         </p>
                                         <p className=" text-gray-700 font-semibold  text-2xl">
-                                            TK. 322
+                                            TK. {book?.new_price}
                                         </p>
                                         <p className="text-gray-400 hidden lg:flex"><span>You Save Tk. 68 (17%)</span></p>
                                     </div>
@@ -355,7 +363,7 @@ const BookDetails = () => {
                                 </div>
                                 <div className="col-span-full">
                                     <p className="text-gray-600 text-justify text-lg">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, quibusdam sint dolore nemo reiciendis earum molestias nam placeat nobis, voluptatibus, numquam maxime et rerum veniam! Similique voluptatum nulla veritatis dolorem quam! Aliquid officia eos laborum. Omnis, modi! Quasi, quidem tempore labore, eligendi deserunt itaque adipisci quibusdam, temporibus ut dolorum enim consequatur natus blanditiis minus repudiandae esse ducimus? Aut cum repellat asperiores temporibus voluptatem! Suscipit, magni voluptate debitis cumque architecto repellat natus? Repudiandae perferendis quibusdam molestias? Non similique suscipit, dolor iure exercitationem quaerat nulla itaque ducimus? Dolor consequatur, sapiente earum odio tempore expedita harum. Ab eligendi quis architecto vero alias provident, molestias aliquid perspiciatis quia, voluptatem dicta dolorum excepturi? Cum ipsa nam provident ea laudantium quod placeat quo molestiae veniam ipsam.
+                                    {book?.details}
                                     </p>
                                 </div>
 
@@ -413,9 +421,9 @@ const BookDetails = () => {
                                         <div className="space-y-2 form-control  col-span-full lg:col-span-5 ">
                                             <div className="flex flex-col max-w-xl p-8 shadow-sm rounded-xl lg:p-12 dark:bg-gray-900 dark:text-gray-100">
                                                 <div className="flex flex-col items-center w-full">
-                                                    <h2 className="text-2xl font-bold text-center">Total Reviews (1.8k)</h2>
+                                                    <h2 className="text-2xl font-bold text-center">Total Reviews ({book?.rating?.total})</h2>
                                                     <div className="flex flex-col items-center py-6 space-y-3">
-                                                        <span className="text-center text-8xl font-bold">4.9</span>
+                                                        <span className="text-center text-8xl font-bold">{book?.rating?.number}</span>
                                                         <div className="flex space-x-3">
                                                             <p className="flex text-warning text-4xl">
                                                                 <RiStarSFill></RiStarSFill> <RiStarSFill></RiStarSFill>
