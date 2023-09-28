@@ -6,6 +6,7 @@ import Category from "../../Pages/Home/Category/Category";
 import Books from "../../Pages/Home/Books/Books";
 import BookDetails from "../../Pages/Home/BookDetails/BookDetails";
 import SearchItem from "../../Pages/Home/Search/SearchItem";
+import ShoppingCart from "../../Pages/ShoppingCart/ShoppingCart";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
             {
                 path: "/search",
                 element: <SearchItem></SearchItem>
+            },
+            {
+                path: "/my-cart",
+                element: <ShoppingCart></ShoppingCart>
             },
         ]
     }
