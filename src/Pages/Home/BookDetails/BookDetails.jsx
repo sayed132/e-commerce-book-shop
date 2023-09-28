@@ -9,7 +9,7 @@ import { BsArrow90DegUp, BsArrowCounterclockwise } from "react-icons/bs";
 import { FaHandHoldingUsd } from "react-icons/fa";
 import { AiFillTag, AiOutlineShareAlt } from "react-icons/ai";
 import { useParams } from "react-router-dom";
-import booksData from "../../../books.json"
+import booksData from "../../../../public/books.json"
 const BookDetails = () => {
 
     const { id } = useParams();

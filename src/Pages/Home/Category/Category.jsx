@@ -3,6 +3,7 @@ import { RiStarHalfSFill, RiStarSFill } from "react-icons/ri";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 
 
 const Category = () => {
@@ -27,7 +28,7 @@ const Category = () => {
         <div className="mt-24">
             <Slider {...settings}>
                 {categories.map(category => (
-                    <div className=" lg:px-12 px-2 " key={category.id}>
+                    <Link to={`/category-details/${category.id}`} className=" lg:px-12 px-2" key={category.id}>
                         {/* Your card content here */}
                         <div className="grid grid-cols-4 shadow-md bg-gray-200  ">
                             <div className="col-span-full lg:col-span-2 ">
@@ -71,7 +72,7 @@ const Category = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </Slider>
 

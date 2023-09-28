@@ -1,9 +1,9 @@
 [
     {
         "id": "01",
-        "name": "Romantic Grana",
+        "name": "IT & Technology",
         "author": {
-            "name": "Rafsan jhon",
+            "name": "Rafsan Sayed",
             "published_date": "2022-08-30 16:38:45",
             "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Business_Blueprint_-Coch_Kanchan-c95f1-235280.jpg"
         },
@@ -17,9 +17,9 @@
     },
     {
         "id": "02",
-        "name": "Romantic Grana",
+        "name": "History",
         "author": {
-            "name": "Rafsan jhon",
+            "name": "Jasim Uddin Khan",
             "published_date": "2022-08-30 16:38:45",
             "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Business_Blueprint_-Coch_Kanchan-c95f1-235280.jpg"
         },
@@ -48,9 +48,9 @@
     },
     {
         "id": "04",
-        "name": "Romantic Grana",
+        "name": "Natural",
         "author": {
-            "name": "Rafsan jhon",
+            "name": "Rafsan Biddanondon",
             "published_date": "2022-08-30 16:38:45",
             "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Business_Blueprint_-Coch_Kanchan-c95f1-235280.jpg"
         },
@@ -64,9 +64,9 @@
     },
     {
         "id": "05",
-        "name": "Romantic Grana",
+        "name": "Comic/Sumer Hero",
         "author": {
-            "name": "Rafsan jhon",
+            "name": "Alauddin Babu",
             "published_date": "2022-08-30 16:38:45",
             "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Business_Blueprint_-Coch_Kanchan-c95f1-235280.jpg"
         },
@@ -80,9 +80,9 @@
     },
     {
         "id": "06",
-        "name": "Romantic Grana",
+        "name": "Thrilling",
         "author": {
-            "name": "Rafsan jhon",
+            "name": "Kobi Sifat Kaka",
             "published_date": "2022-08-30 16:38:45",
             "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Business_Blueprint_-Coch_Kanchan-c95f1-235280.jpg"
         },
@@ -95,9 +95,9 @@
     },
     {
         "id": "07",
-        "name": "Romantic Grana",
+        "name": "Islamic",
         "author": {
-            "name": "Rafsan jhon",
+            "name": "Altmash Oliullah",
             "published_date": "2022-08-30 16:38:45",
             "img": "https://ds.rokomari.store/rokomari110/ProductNew20190903/130X186/Business_Blueprint_-Coch_Kanchan-c95f1-235280.jpg"
         },
