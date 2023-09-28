@@ -25,10 +25,10 @@ const Category = () => {
         autoplaySpeed: 3000, // Autoplay every 1 second (1000ms
     };
     return (
-        <div className="mt-24">
+        <div className="lg:mt-24 hidden lg:block">
             <Slider {...settings}>
                 {categories.map(category => (
-                    <Link to={`/category-details/${category.id}`} className=" lg:px-12 px-2" key={category.id}>
+                    <Link to={`/category-details/${category.id}`} className="  px-2" key={category.id}>
                         {/* Your card content here */}
                         <div className="grid grid-cols-4 shadow-md bg-gray-200  ">
                             <div className="col-span-full lg:col-span-2 ">
