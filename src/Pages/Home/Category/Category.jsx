@@ -41,7 +41,7 @@ const Category = () => {
                                     <div className=" form-control  col-span-full text-start ">
                                         <div className="flex items-center gap-2">
 
-                                            <p className="font-bold text-sm lg:text-base text-gray-600">{category?.name}</p>
+                                            <p className="lg:font-bold text-xs lg:text-base text-gray-600">{category?.name}</p>
 
                                         </div>
                                     </div>

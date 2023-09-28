@@ -18,55 +18,55 @@ const ShoppingCart = () => {
     return (
         <div className="my-12">
             <h2 className="text-xl mb-4 font-bold">Shopping Cart</h2>
-            <div className="flex items-start justify-between gap-11">
+            <div className="lg:flex items-start justify-between gap-11">
 
                 <div className="">
                     {
-                        booksData.map(book =>(
-                            <div key={book._id} className="grid grid-cols-7 items-center gap-x-4 bg-base-200 shadow-xl p-3 mb-6 relative rounded">
-                        <div className='col-span-1'>
-                            <figure>
-                                <img className='h-36' src={book?.author?.image} alt="Album" />
-                            </figure>
-                        </div>
-                        <div className='col-span-3 text-start'>
-                            <h1>{book?.title}</h1>
-                            <p className="text-sm dark:text-gray-400">{book?.category}</p>
+                        booksData.map(book => (
+                            <div key={book._id} className="grid grid-cols-7 justify-items-center  items-center lg:gap-x-4 bg-base-200 shadow-xl p-3 mb-6 relative rounded">
+                                <div className='col-span-full lg:col-span-1 '>
+                                    <figure>
+                                        <img className='lg:h-36' src={book?.author?.image} alt="Album" />
+                                    </figure>
+                                </div>
+                                <div className='col-span-full lg:col-span-3 text-start'>
+                                    <h1>{book?.title}</h1>
+                                    <p className="text-sm dark:text-gray-400">{book?.category}</p>
 
 
-                        </div>
-                        <div className="text-start col-span-1">
-                            <p className="text-lg font-semibold">TK. {book?.new_price}</p>
-                            <p className="text-sm line-through dark:text-gray-600">TK. {book?.prev_price}</p>
-                        </div>
+                                </div>
+                                <div className="text-start col-span-full lg:col-span-1">
+                                    <p className="text-lg font-semibold">TK. {book?.new_price}</p>
+                                    <p className="text-sm line-through dark:text-gray-600">TK. {book?.prev_price}</p>
+                                </div>
 
-                        <div className='col-span-2'>
-                            <div className="flex items-center space-x-2">
-                                <button
-                                    className="btn btn-sm btn-primary"
-                                    onClick={decrementQuantity}
-                                >
-                                    -
-                                </button>
-                                <input
-                                    className="input input-bordered w-24 text-center"
-                                    type="number"
-                                    value={quantity}
-                                    onChange={(e) => setQuantity(parseInt(e.target.value))}
-                                />
-                                <button
-                                    className="btn btn-sm btn-primary"
-                                    onClick={incrementQuantity}
-                                >
-                                    +
-                                </button>
+                                <div className='col-span-full lg:col-span-2'>
+                                    <div className="flex items-center space-x-2">
+                                        <button
+                                            className="btn btn-sm btn-primary"
+                                            onClick={decrementQuantity}
+                                        >
+                                            -
+                                        </button>
+                                        <input
+                                            className="input input-bordered w-24 text-center"
+                                            type="number"
+                                            value={quantity}
+                                            onChange={(e) => setQuantity(parseInt(e.target.value))}
+                                        />
+                                        <button
+                                            className="btn btn-sm btn-primary"
+                                            onClick={incrementQuantity}
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className='absolute right-2 top-1'>
+                                    <button className='text-3xl  text-red-400 hover:text-red-600'><CiCircleRemove></CiCircleRemove></button>
+                                </div>
+
                             </div>
-                        </div>
-                        <div className='absolute right-2 top-1'>
-                            <button className='text-3xl  text-red-400 hover:text-red-600'><CiCircleRemove></CiCircleRemove></button>
-                        </div>
-
-                    </div>
                         ))
                     }
                 </div>
